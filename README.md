@@ -9,6 +9,9 @@ A simple extension to quickly format any C# and Java stack trace.
 ### Demo
 ![App Demo](demo.gif)
 
+### 1.1.0
+* Clean up Async lines
+
 ### 1.0.5
 * Fix regression in C# formatting
 

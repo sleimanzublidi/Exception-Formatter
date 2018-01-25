@@ -2,10 +2,10 @@
     "name": "stack-trace-formatter",
     "displayName": "Stack Trace Formatter",
     "description": "Formats C# and Java stack traces.",
-    "version": "1.0.5",
-    "publisher": "RadwanFaci",
+    "version": "1.1.0",
+    "publisher": "SleimanZublidi",
     "repository": {
-        "url": "https://github.com/Hydrosis/Exception-Formatter"
+        "url": "https://github.com/SleimanZublidi/Exception-Formatter"
     },
     "engines": {
         "vscode": "^1.15.0"
@@ -18,10 +18,12 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.formatStackTrace",
-            "title": "Format Stack Trace"
-        }]
+        "commands": [
+            {
+                "command": "extension.formatStackTrace",
+                "title": "Format Stack Trace"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
@@ -30,10 +32,14 @@
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
+        "@types/mocha": "^2.2.32",
         "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+        "mocha": "^2.3.3",
+        "tsc-watch": "^1.0.15",
+        "typescript": "^2.0.3",
+        "vscode": "^1.1.10"
+    },
+    "dependencies": {
+        "pug": "^2.0.0-rc.4"
     }
 }

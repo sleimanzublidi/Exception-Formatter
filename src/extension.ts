@@ -82,6 +82,23 @@ export class StackTraceFormatter
         replacementTokens.forEach(token => {
             result = result.replace(token.original, token.replacement);
         });
+
+        var lines = result.split('\n');
+        result = '';
+
+        lines.forEach(line =>
+        {
+            if(line.indexOf('at System.Runtime.CompilerServices.TaskAwaiter') < 0)
+            {
+                var start = line.indexOf('\\n-');
+                if (start > 0)
+                {
+                    line = line.substring(0, start);
+                }
+
+                result = result + line + '\n';
+            }
+        });
     
         return result;
     };
